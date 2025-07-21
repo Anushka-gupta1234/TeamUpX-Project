@@ -21,6 +21,53 @@
       line-height: 1.6;
       min-height: 100vh;
     }
+    
+           /* Navbar */
+    .navbar {
+      background: #1f1f2e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .nav-links li a {
+      color: #f0f0f0;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    
+    .nav-links li a:hover,
+    .nav-links li .cta-button:hover {
+      background: #3c3c5e;
+    }
+    
+    .cta-button {
+      background-color: #fca311;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    
+    .cta-button:hover {
+      background-color: #ff9900;
+    }
 
     header {
       background: linear-gradient(to right, #14213d, #1d3557);
@@ -183,6 +230,21 @@
 </head>
 
 <body>
+  <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">TeamUpX</div>
+        <ul class="nav-links">
+            <li><a href="../homepage.html">Home</a></li>
+            <li><a href="../profile/profile.html">Create Profile</a></li>
+            <li><a href="../FindTeam/team.html">Find Teammates</a></li>
+            <li><a href="../Discussion/chat.html">Join Discussion Forum</a></li>
+            <!-- <li><a href="#">Explore Projects</a></li> -->
+            <li><a href="../AboutUs/aboutUs.html">About Us</a></li>
+            <li><a href="../feedback/feedback.html">Contact</a></li>
+            <li><a href="../register/register.html" class="cta-button">Sign Up</a></li>
+            <li><a href="../login/login.html" class="cta-button">Sign In</a></li>
+        </ul>
+    </nav>
   <header>
     <h1>We'd love your feedback!</h1>
     <p>Tell us what you think or suggest a feature</p>
