@@ -33,8 +33,9 @@ async function fetchProfiles() {
       return;
     }
 
-    // Render summary cards
-    container.innerHTML = profiles.map((profile, index) => `
+    const reversedProfiles = profiles.slice().reverse();
+
+    container.innerHTML = reversedProfiles.map((profile, index) => `
       <div class="profile-card" data-index="${index}">
         <h3>${profile.fullName}</h3>
         <p><strong>Bio:</strong> ${profile.bio}</p>
@@ -42,11 +43,10 @@ async function fetchProfiles() {
       </div>
     `).join('');
 
-    // Add click event listeners to cards
     document.querySelectorAll('.profile-card').forEach(card => {
       card.addEventListener('click', () => {
         const i = card.getAttribute('data-index');
-        showProfileModal(profiles[i]);
+        showProfileModal(reversedProfiles[i]);
       });
     });
 
